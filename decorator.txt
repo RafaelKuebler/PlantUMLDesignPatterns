@@ -1,0 +1,37 @@
+/' DECORATOR '/
+
+@startuml
+
+interface Component {
+    + operation()
+}
+
+class ConcreteComponent {
+    + operation()
+}
+
+class Decorator {
+    + operation()
+}
+
+class ConcreteDecorator {
+    - addedState
+    + operation()
+    + addedBehaviour()
+}
+
+Component <|-- ConcreteComponent
+Component <|-- Decorator
+Component --* Decorator
+Decorator <|- ConcreteDecorator
+
+note as N1
+    <b><color:royalBlue>Decorator</color></b>
+    <b>Type:</b> Structural
+    Attach additional responsibilities to an
+    object synamically. Provide a flexible
+    alternative to sub-classing for extending
+    functionality.
+end note
+
+@enduml

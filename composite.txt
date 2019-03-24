@@ -1,0 +1,36 @@
+/' COMPOSITE '/
+
+@startuml
+
+interface Component {
+    + operation()
+    + add(in c : Composite)()
+    + remove(in c : Composite)
+    + getChild(in i : int)
+}
+
+class Leaf {
+    + operation()
+}
+
+class Composite {
+    + operation()
+    + add(in c : Composite)()
+    + remove(in c : Composite)
+    + getChild(in i : int)
+}
+
+Component <|-- Leaf
+Component <|-- Composite
+Component --* Composite
+
+note as N1
+    <b><color:royalBlue>Composite</color></b>
+    <b>Type:</b> Structural
+    Compose objects into tree structures to
+    represent part-whole hierarchies. Lets
+    clients treat individual objects and
+    compositions of objects uniformly.
+end note
+
+@enduml
