@@ -1,0 +1,36 @@
+/' ADAPTER '/
+
+@startuml
+
+interface Adapter {
+    + operation()
+}
+
+class Client
+
+class ConcreteAdapter {
+    - adaptee
+    + operation()
+}
+
+class Adaptee {
+    + adaptedOperation()
+}
+
+hide empty members
+
+Adapter <- Client
+Adapter <|-- ConcreteAdapter
+ConcreteAdapter -> Adaptee
+
+note as N1
+    <b><color:royalBlue>Adapter</color></b>
+    <b>Type:</b> Structural
+    Convert the interface of a class into
+    another interface clients expect. Lets
+    classes work together that couldn't
+    otherwise because of incompatible
+    interfaces.
+end note
+
+@enduml

@@ -1,0 +1,33 @@
+/' BRIDGE '/
+
+@startuml
+
+class Abstraction {
+    + operation()
+}
+
+interface Implementor {
+    + operationImpl()
+}
+
+class ConcreteImplementorA {
+    + operationImpl()
+}
+
+class ConcreteImplementorB {
+    + operationImpl()
+}
+
+Abstraction --* Implementor
+Implementor <|-- ConcreteImplementorA
+Implementor <|-- ConcreteImplementorB
+
+note as N1
+    <b><color:royalBlue>Bridge</color></b>
+    <b>Type:</b> Structural
+    Decouple an astraction from its
+    implementation so that the two can
+    vary independently.
+end note
+
+@enduml
