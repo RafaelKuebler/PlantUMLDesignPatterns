@@ -4,3 +4,6 @@ output
 
 # plantuml
 plantuml.jar
+
+# hashes
+data.json
