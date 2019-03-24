@@ -1,0 +1,31 @@
+/' BUILDER '/
+
+@startuml
+
+class Director {
+    + construct()
+}
+
+interface Builder {
+    buildPart()
+}
+
+class ConcreteBuilder {
+    + buildPart()
+    + getResult()
+}
+
+Director *- Builder
+Builder <|-- ConcreteBuilder
+
+note as N1
+    <b><color:royalBlue>Builder</color></b>
+    <b>Type:</b> Creational
+    Separate the construction of a
+    complex object from its representing
+    so that the same construction
+    process can create different
+    representations.
+end note
+
+@enduml

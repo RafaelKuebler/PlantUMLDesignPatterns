@@ -1,0 +1,34 @@
+/' PROTOTYPE '/
+
+@startuml
+
+interface Prototype {
+    + clone()
+}
+
+class Client
+
+class ConcretePrototype1 {
+    + clone()
+}
+
+class ConcretePrototype2 {
+    + clone()
+}
+
+hide empty members
+
+Client --> Prototype
+Prototype <|-- ConcretePrototype1
+Prototype <|-- ConcretePrototype2
+
+note as N1
+    <b><color:royalBlue>Prototype</color></b>
+    <b>Type:</b> Creational
+    <b>What it is:</b>
+    Specify the kinds of objects to create
+    using a prototypical instance, and
+    create new objects by copying this prototype.
+end note
+
+@enduml
