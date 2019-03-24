@@ -1,0 +1,41 @@
+/' FLYWEIGHT '/
+
+@startuml
+
+class FlyweightFactory {
+    + getFlyweight()
+}
+
+interface Flyweight {
+    + operation(in extrinsicState)
+}
+
+class Client
+
+class ConcreteFlyweight {
+    - intrinsicState
+    + operation(in extrinsicState)
+}
+
+class UnsharedConcreteFlyweight {
+    - allState
+    + operation(in extrinsicState)
+}
+
+hide empty members
+
+FlyweightFactory *- Flyweight
+Flyweight <|-- ConcreteFlyweight
+Flyweight <|-- UnsharedConcreteFlyweight
+FlyweightFactory <-- Client
+ConcreteFlyweight <-- Client
+UnsharedConcreteFlyweight <-- Client
+
+note as N1
+    <b><color:royalBlue>Flyweight</color></b>
+    <b>Type:</b> Structural
+    Use sharing to support large numbers of
+    fine grained objects efficiently.
+end note
+
+@enduml

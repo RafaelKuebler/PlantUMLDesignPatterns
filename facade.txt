@@ -1,0 +1,29 @@
+/' FACADE '/
+
+@startuml
+
+class Facade
+
+package "Complex system" <<Node>> {
+    class Dummy1
+    class Dummy2
+    class Dummy3
+    class Dummy4 
+}
+
+hide empty members
+
+Facade --> Dummy1
+Facade --> Dummy2
+Facade --> Dummy3
+Facade --> Dummy4
+
+note as N1
+    <b><color:royalBlue>Facade</color></b>
+    <b>Type:</b> Structural
+    Provide a unified interface to a set of
+    interfaces in a subsystem. Defines a high-level
+    interface that makes the subsystem easier to use.
+end note
+
+@enduml
