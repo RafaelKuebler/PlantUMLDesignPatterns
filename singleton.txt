@@ -14,7 +14,6 @@ class Singleton {
 note as N1
     <b><color:royalBlue>Singleton</color></b>
     <b>Type:</b> Creational
-    <b>What it is:</b>
     Ensure a class only has one instance
     and provide a global point of access to it.
 end note

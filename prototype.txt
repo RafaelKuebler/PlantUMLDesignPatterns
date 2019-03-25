@@ -25,7 +25,6 @@ Prototype <|-- ConcretePrototype2
 note as N1
     <b><color:royalBlue>Prototype</color></b>
     <b>Type:</b> Creational
-    <b>What it is:</b>
     Specify the kinds of objects to create
     using a prototypical instance, and
     create new objects by copying this prototype.
