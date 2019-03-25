@@ -24,7 +24,10 @@ for file in os.listdir():
     if file.endswith(".txt"):
         # run plantuml if diagram is new or has changed
         hash = md5(file)
-        if file not in data or hash != data[file]:
+        has_changed = hash != data[file]
+        not_existing = not os.path.isfile('./output/{}'.format(file.replace('txt', 'png')))
+        
+        if has_changed or not_existing:
             print("Processing {}".format(file))
             subprocess.run(['java', '-jar', 'plantuml.jar', '-duration', '-o', './output', file])
         data[file] = hash
