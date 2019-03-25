@@ -4,6 +4,9 @@
 The syntax can be looked up on [PlantUML's class diagram documentation](http://plantuml.com/class-diagram).
 
 
+## Example
+![abstract_factory](https://user-images.githubusercontent.com/9216979/54890891-b84dee80-4eab-11e9-9cca-7318506eb934.png)
+
 ## Included patterns
 
 | Creational       | Structural | Behavioral              |
