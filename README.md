@@ -5,7 +5,9 @@ The syntax can be looked up on [PlantUML's class diagram documentation](http://p
 
 
 ## Example
-![abstract_factory](https://user-images.githubusercontent.com/9216979/54890891-b84dee80-4eab-11e9-9cca-7318506eb934.png)
+Code | Diagram
+--- | ---
+<img alt="Abstract factory code" src="https://user-images.githubusercontent.com/9216979/54891016-3b6f4480-4eac-11e9-94ae-111b58f0afcb.png" width="350"> | <img alt="Abstract factory diagram" src="https://user-images.githubusercontent.com/9216979/54890891-b84dee80-4eab-11e9-9cca-7318506eb934.png" width="400">
 
 ## Included patterns
 
