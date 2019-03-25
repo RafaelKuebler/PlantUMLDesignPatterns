@@ -4,42 +4,26 @@
 The syntax can be looked up on [PlantUML's class diagram documentation](http://plantuml.com/class-diagram).
 
 
+## Included patterns
+
+| Creational       | Structural | Behavioral              |
+| ---------------- | ---------- | ----------------------- |
+| Abstract factory | Adapter    | Chain of Responsibility |
+| Builder          | Bridge     | Command                 |
+| Factory method   | Composite  | Interpreter             |
+| Prototype        | Decorator  | Iterator                |
+| Singleton        | Facade     | Mediator                |
+| &nbsp;           | Flyweight  | Memento                 |
+| &nbsp;           | Proxy      | Observer                |
+| &nbsp;           | &nbsp;     | State                   |
+| &nbsp;           | &nbsp;     | Strategy                |
+| &nbsp;           | &nbsp;     | Template method         |
+| &nbsp;           | &nbsp;     | Visitor                 |
+
+
 ## Running
 
 If you do not intend to run locally, please have a look at the alternatives found in [this overview](http://plantuml.com/running).
-
-
-## Included patterns
-
-Creational
-- Abstract factory
-- Builder
-- Factory method
-- Prototype
-- Singleton
-
-Structural
-- Adapter
-- Bridge
-- Composite
-- Decorator
-- Facade
-- Flyweight
-- Proxy
-
-Behavioral
-- Chain of Responsibility
-- Command
-- Interpreter
-- Iterator
-- Mediator
-- Memento
-- Observer
-- State
-- Strategy
-- Template method
-- Visitor
-
 
 ### Prerequisites
 
@@ -50,17 +34,17 @@ As described on the [Getting started](http://plantuml.com/starting) site, you wi
 The easiest way is to just run the included python script ([run.py](run.py)).
 It checks for changes in the diagram files and only generates the new/changed/not existing ones.
 
-´´´
+```
 python run.py
-´´´
+```
 
 The generated diagrams are stored in the *output* folder.
 
 To run PlantUML directly from the command line for one specific diagram, you can execute:
 
-´´´
+```
 java -jar plantuml.jar diagram.txt
-´´´
+```
 
 
 ## Built With
