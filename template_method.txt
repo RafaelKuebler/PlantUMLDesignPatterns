@@ -1,0 +1,28 @@
+/' TEMPLATE METHOD '/
+
+@startuml
+
+class AbstractClass {
+    + templateMethod()
+    # subMethod()
+}
+
+class ConcreteClass {
+    + subMethod()
+}
+
+hide empty members
+
+AbstractClass <|-- ConcreteClass
+
+note as N1
+    <b><color:royalBlue>Template Method</color></b>
+    <b>Type:</b> Behavioral
+    Define the skeleton of an algorithm in an
+    operation, deferring some steps to subclasses.
+    Lets subclasses redefine certain steps
+    of an algorithm without changing the
+    algorithm's structure.
+end note
+
+@enduml

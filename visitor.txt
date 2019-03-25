@@ -1,0 +1,46 @@
+/' VISITOR '/
+
+@startuml
+
+class Client
+
+interface Visitor {
+    + visitElementA(in a :ConcreteElementA)
+    + visitElementB(in b :ConcreteElementB)
+}
+
+class ConcreteVisitor {
+    + visitElementA(in a :ConcreteElementA)
+    + visitElementB(in b :ConcreteElementB)
+}
+
+interface Element {
+    + accept(in v : Visitor)
+}
+
+class ConcreteElementA {
+    + accept(in v : Visitor)
+}
+
+class ConcreteElementB {
+    + accept(in v : Visitor)
+}
+
+Visitor <- Client
+Visitor <|-- ConcreteVisitor
+Client --> Element
+Element <|-- ConcreteElementA
+Element <|-- ConcreteElementB
+
+note as N1
+    <b><color:royalBlue>Visitor</color></b>
+    <b>Type:</b> Behavioral
+    Represent an operation to be
+    performed on the elements of an
+    object structure. Lets you define a
+    new operation without changing
+    the classes of the elements on
+    which it operates.
+end note
+
+@enduml

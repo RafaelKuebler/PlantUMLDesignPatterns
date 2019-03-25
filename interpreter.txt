@@ -1,0 +1,38 @@
+/' INTERPRETER '/
+
+@startuml
+
+class Client
+
+class Context
+
+interface AbstractExpression {
+    + interpret()
+}
+
+class TerminalExpression {
+    + interpret() : Context
+}
+
+class NonterminalExpression {
+    + factoryMethod() : Context
+}
+
+hide empty members
+
+Context <- Client
+Client --> AbstractExpression
+AbstractExpression <|-- TerminalExpression
+AbstractExpression <|-- NonterminalExpression
+AbstractExpression --* NonterminalExpression
+
+note as N1
+    <b><color:royalBlue>Interpreter</color></b>
+    <b>Type:</b> Behavioral
+    Given a language, define a representation
+    for its grammar along with an interpreter
+    that uses the representation to interpret
+    sentences in the language.
+end note
+
+@enduml

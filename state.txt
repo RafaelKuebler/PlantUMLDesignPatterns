@@ -1,0 +1,35 @@
+/' STATE '/
+
+@startuml
+
+class Context {
+    + request()
+}
+
+interface State {
+    + handle()
+}
+
+class ConcreteState1 {
+    + handle()
+}
+
+class ConcreteState2 {
+    + handle()
+}
+
+hide empty members
+
+Context *-- State
+State <|-- ConcreteState1
+State <|-- ConcreteState2
+
+note as N1
+    <b><color:royalBlue>State</color></b>
+    <b>Type:</b> Behavioral
+    Allow an object to alter its behavior when
+    its internal state changes. The object will
+    appear to change its class.
+end note
+
+@enduml

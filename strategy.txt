@@ -1,0 +1,35 @@
+/' STRATEGY '/
+
+@startuml
+
+class Context
+
+interface Strategy {
+    + execute()
+}
+
+class ConcreteStrategyA {
+    + execute()
+}
+
+class ConcreteStrategyB {
+    + execute()
+}
+
+hide empty members
+
+Context *-- Strategy
+Strategy <|-- ConcreteStrategyA
+Strategy <|-- ConcreteStrategyB
+
+note as N1
+    <b><color:royalBlue>Strategy</color></b>
+    <b>Type:</b> Behavioral
+    Define a family of algorithms,
+    encapsulate each one, and make them
+    interchangeable. Lets the algorithm vary
+    independently from
+    clients that use it.
+end note
+
+@enduml
