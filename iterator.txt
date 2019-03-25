@@ -1,0 +1,38 @@
+/' ITERATOR '/
+
+@startuml
+
+class Client
+
+interface Aggregate {
+    + createIterator()
+}
+
+class ConcreteAggregate {
+    + createIterator() : Context
+}
+
+interface Iterator {
+    + next() : Context
+}
+
+class ConcreteIterator {
+    + next() : Context
+}
+
+hide empty members
+
+Client --> Aggregate
+Client --> Iterator
+Aggregate <|-- ConcreteAggregate
+Iterator <|-- ConcreteIterator
+
+note as N1
+    <b><color:royalBlue>Iterator</color></b>
+    <b>Type:</b> Behavioral
+    Provide a way to access the elements of
+    an aggregate object sequentially without
+    exposing its underlying representation.
+end note
+
+@enduml

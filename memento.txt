@@ -1,0 +1,31 @@
+/' MEMENTO '/
+
+@startuml
+
+class Caretaker
+
+class Memento {
+    - state
+}
+
+class Originator {
+    - state
+    + setMemento(in m : Memento)
+    + createMemento()
+}
+
+hide empty members
+
+Caretaker *- Memento
+Memento <-- Originator
+
+note as N1
+    <b><color:royalBlue>Memento</color></b>
+    <b>Type:</b> Behavioral
+    Without violating encapsulation, capture
+    and externalize an object's internal state
+    so that the object can be restored to this
+    state later.
+end note
+
+@enduml

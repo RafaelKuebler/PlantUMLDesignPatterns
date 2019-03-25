@@ -1,0 +1,39 @@
+/' COMMAND '/
+
+@startuml
+
+class Client
+
+class Invoker
+
+class Receiver {
+    + action()
+}
+
+class Command {
+    + execute()
+}
+
+class ConcreteCommand {
+    + execute()
+}
+
+hide empty members
+
+Client -> Invoker
+Client --> Receiver
+Invoker *-- Command
+Client ..> ConcreteCommand
+Receiver -> ConcreteCommand
+ConcreteCommand -|> Command
+
+note as N1
+    <b><color:royalBlue>Command</color></b>
+    <b>Type:</b> Behavioral
+    Encapsulate a request as an object,
+    thereby letting you parameterize clients
+    with different requests, queue or log
+    requests, and support undoable operations.
+end note
+
+@enduml

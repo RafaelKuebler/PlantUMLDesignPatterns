@@ -1,0 +1,31 @@
+/' MEDIATOR '/
+
+@startuml
+
+
+class Mediator
+
+class ConcreteMediator
+
+interface Colleague
+
+class ConcreteColleague
+
+hide empty members
+
+Mediator <- Colleague : informs
+Mediator <|-- ConcreteMediator
+ConcreteMediator -> ConcreteColleague
+Colleague <|-- ConcreteColleague
+
+note as N1
+    <b><color:royalBlue>Mediator</color></b>
+    <b>Type:</b> Behavioral
+    Define an object that encapsulates how a
+    set of objects interact. Promotes loose
+    coupling by keeping objects from referring
+    to each other explicitly and it lets you vary
+    their interactions independently.
+end note
+
+@enduml

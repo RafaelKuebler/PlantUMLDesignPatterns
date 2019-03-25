@@ -1,0 +1,36 @@
+/' CHAIN OF RESPONSIBILITY '/
+
+@startuml
+
+class Client
+
+interface Handler {
+    + handleRequest()
+}
+
+class ConcreteHandler1 {
+    + handleRequest()
+}
+
+class ConcreteHandler2 {
+    + handleRequest()
+}
+
+hide empty members
+
+Client -> Handler
+Handler <|-- ConcreteHandler1
+Handler <|-- ConcreteHandler2
+Handler -> Handler : successor
+
+note as N1
+    <b><color:royalBlue>Chain of Responsibility</color></b>
+    <b>Type:</b> Behavioral
+    Avoid coupling the sender of a request to
+    its receiver by giving more than one object
+    a chance to handle the request. Chain the
+    receiving objects and pass the request
+    along the chain until an object handles it.
+end note
+
+@enduml
